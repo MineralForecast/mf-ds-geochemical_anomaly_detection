@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+data_files/Compositado_au_ag_1m.csv
+data_files/Resultados_Z2_SIMPL.csv
+data_files/TRINCHERAS_ALL_SIMPL.csv

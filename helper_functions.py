@@ -317,10 +317,10 @@ def plot_validation(
         validation_df[x_col],
         validation_df[y_col],
         c="yellow",
-        s=point_size * 30,  # Slightly larger for visibility
+        s=point_size * 5,  # Slightly larger for visibility
         marker="*",
         label="Known Mineral Occurrences",
-        edgecolor="black",
+        edgecolor="none",
     )
 
     plt.xlabel(x_col)
@@ -797,7 +797,7 @@ def plot_mode_median(df: pd.DataFrame, feature_columns: list, figsize: tuple = (
     """
     # Compute mode (first mode value) and median for each feature
     mode_values = df[feature_columns].mode().iloc[0]
-    median_values = df[feature_columns].median()
+    median_values = df[feature_columns].astype(float).median()
 
     # Create subplots
     fig, axes = plt.subplots(nrows=2, ncols=1, figsize=figsize, sharex=True)
